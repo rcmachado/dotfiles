@@ -21,7 +21,7 @@ shopt -s cmdhist
 export EDITOR="vim"
 
 # PATH customization
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/local/heroku/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node_modules"
 
 # Load other bash stuff
@@ -29,16 +29,16 @@ export NODE_PATH="/usr/local/lib/node_modules"
 [[ -f "$HOME/.bash_colors" ]] && source "$HOME/.bash_colors"
 
 # AWS stuff
-[[ -f "$HOME/aws.sh" ]] && source "$HOME/aws.sh"
+[[ -f "$HOME/.aws.sh" ]] && source "$HOME/.aws.sh"
 
 # Python stuff
-[[ -f "$HOME/python.sh" ]] && source "$HOME/python.sh"
+[[ -f "$HOME/.python.sh" ]] && source "$HOME/.python.sh"
 
 # Activate RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Git prompt
-[[ -f "$HOME/git-prompt.sh" ]] && source "$HOME/git-prompt.sh"
+[[ -f "$HOME/.git-prompt.sh" ]] && source "$HOME/.git-prompt.sh"
 
 # Homebrew bash completion
 HOMEBREW_COMPLETION="`brew --prefix`/etc/bash_completion"
