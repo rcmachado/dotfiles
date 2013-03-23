@@ -29,3 +29,5 @@ for DOTFILE in *; do
         ln -sv "$DIRFILE" "$HOMEFILE"
     fi
 done
+
+"$DIR/install-gitignore.sh" "$INSTALL_DIR/"
