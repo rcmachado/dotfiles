@@ -37,6 +37,9 @@ export NODE_PATH="/usr/local/lib/node_modules"
 # Activate RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+# Git prompt
+[[ -f "$HOME/git-prompt.sh" ]] && source "$HOME/git-prompt.sh"
+
 # Homebrew bash completion
 HOMEBREW_COMPLETION="`brew --prefix`/etc/bash_completion"
 [[ -f "$HOMEBREW_COMPLETION" ]] && source "$HOMEBREW_COMPLETION"
