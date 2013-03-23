@@ -3,8 +3,7 @@
 # Install all the dotfiles on system (using symlinks)
 #
 
-#INSTALL_DIR="$HOME"
-INSTALL_DIR="/tmp/dotfiles"
+INSTALL_DIR="$HOME"
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
