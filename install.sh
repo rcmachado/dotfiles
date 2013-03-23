@@ -16,7 +16,7 @@ for DOTFILE in *; do
     [ -d $DOTFILE ] && DOTFILE="$DOTFILE/"
     DIRFILE="$DIR/$DOTFILE"
 
-    echo $DOTFILE | egrep -q '(dotfiles|\.txt|\.md)' && continue
+    echo $DOTFILE | egrep -q '(install|\.txt|\.md)' && continue
 
     #echo $DOTFILE | grep -q '\.sh' \
     #    && HOMEFILE="$INSTALL_DIR/.$(echo $DOTFILE | sed -e 's/\.sh//')"
