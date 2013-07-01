@@ -38,6 +38,7 @@ export NODE_PATH="/usr/local/lib/node_modules"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Git prompt
+source "/usr/local/etc/bash_completion.d/git-prompt.sh"
 [[ -f "$HOME/.git-prompt.sh" ]] && source "$HOME/.git-prompt.sh"
 
 # Homebrew bash completion
