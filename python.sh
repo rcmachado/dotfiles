@@ -3,9 +3,6 @@
 # Python setup & configuration
 #
 
-# Python bin dir
-export PATH="/usr/local/share/python:$PATH"
-
 # Python random hash seed (security)
 export PYTHONHASHSEED=random
 
