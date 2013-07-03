@@ -7,9 +7,12 @@
 export PYTHONHASHSEED=random
 
 # VirtualenvWrapper
-export WORKON_HOME="$HOME/Developer/virtualenvs"
-export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python2.7"
-source /usr/local/bin/virtualenvwrapper.sh
+VENVWRAPPER_SCR="/usr/local/bin/virtualenvwrapper.sh"
+if [ -f "$VENVWRAPPER_SCR" ]; then
+    export WORKON_HOME="$HOME/Developer/virtualenvs"
+    export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python2.7"
+    source "$VENVWRAPPER_SCR"
+fi
 
 # pip bash completion
 _pip_completion()
