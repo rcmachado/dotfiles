@@ -21,7 +21,7 @@ shopt -s cmdhist
 export EDITOR="vim"
 
 # PATH customization
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/local/heroku/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$(brew --prefix josegonzalez/php/php53)/bin:/usr/local/share/npm/bin:/usr/local/heroku/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node_modules"
 
 # Load other bash stuff
