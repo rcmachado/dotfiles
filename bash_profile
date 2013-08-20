@@ -47,3 +47,11 @@ source "/usr/local/etc/bash_completion.d/git-prompt.sh"
 # Homebrew bash completion
 HOMEBREW_COMPLETION="`brew --prefix`/etc/bash_completion"
 [[ -f "$HOMEBREW_COMPLETION" ]] && source "$HOMEBREW_COMPLETION"
+
+venv_activate() {
+    [ -e .venv ] && workon `cat .venv`
+}
+venv_cd() {
+    builtin cd "$@" && venv_activate
+}
+alias cd="venv_cd"
