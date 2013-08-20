@@ -24,6 +24,9 @@ export EDITOR="vim"
 export PATH="/usr/local/bin:/usr/local/sbin:$(brew --prefix josegonzalez/php/php53)/bin:/usr/local/share/npm/bin:/usr/local/heroku/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node_modules"
 
+# lolcommits - enable fork process for runner
+LOLCOMMITS_FORK=1
+
 # Load other bash stuff
 [[ -f "$HOME/.bash_aliases" ]] && source "$HOME/.bash_aliases"
 [[ -f "$HOME/.bash_colors" ]] && source "$HOME/.bash_colors"
