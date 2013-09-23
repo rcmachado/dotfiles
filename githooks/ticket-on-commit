@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# If you use a ticket system and name your branches using this pattern:
+#
+#     story/123456-my-branch
+#
+# This scripts will extract the ticket id (when applicable) and put it
+# at the beginning of the commit message:
+#
+#     [#123456]
+#
+
+CURRENT_BRANCH=`git rev-parse --abbrev-ref HEAD`
+TICKET_ID=`echo $CURRENT_BRANCH | sed -n 's/^story\/\([0-9]*\).*$/\1/p'`
+
+if [ "$TICKET_ID" != "" ]; then
+    sed -i -e '1s;^;[#'$TICKET_ID'] ;' "$1"
+fi
+
+exit 0
