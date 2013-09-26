@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+# pre-commit hook
+#
+# - Prevent commiting var_dump statements
+# - Do a simple lint check on PHP files
+#
+
+FORBIDDEN="var_dump"
+FILES_FOUND=`git diff --cached -G"var_dump" --name-only -- '*.php'`
+
+if [ "$FILES_FOUND" != "" ]; then
+    echo "COMMIT REJECTED! Found '$FORBIDDEN' references. Please remove them before commiting";
+    echo $FILES_FOUND
+    exit 1;
+fi
+
+# Check for syntax errors
+FILES_FOUND=`git diff --cached --name-only -- '*.php'`
+for FILE in $FILES_FOUND; do
+    php -l "$FILE" > /dev/null
+    if [ $? != 0 ]; then
+        exit 2;
+    fi
+done
+
+exit 0;
