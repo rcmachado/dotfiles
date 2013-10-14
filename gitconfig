@@ -19,6 +19,7 @@
 
 [alias]
 	serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
+	glog = log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
 
 [include]
 	; Private config settings for user
