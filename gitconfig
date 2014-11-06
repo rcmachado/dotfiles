@@ -41,7 +41,6 @@
 	uningore = update-index --no-assume-unchanged
 	ignored = !git ls-files -v | grep '^[a-z]'
 
-
 [include]
 	; Private config settings for user
 	; Don't ever commit this file
