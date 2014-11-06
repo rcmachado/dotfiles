@@ -7,7 +7,7 @@ function scp() {
     if [[ "$@" =~ : ]]; then
         /usr/bin/scp $@;
     else
-        echo "You forgot the colon dumbass!";
+        echo "You forgot the colon";
     fi
 }
 
