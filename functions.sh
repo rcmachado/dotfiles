@@ -10,3 +10,9 @@ function scp() {
         echo "You forgot the colon dumbass!";
     fi
 }
+
+# Build a gitignore file for project
+# See https://www.gitignore.io/
+function gi() {
+    curl -L -s "https://www.gitignore.io/api/$@";
+}
