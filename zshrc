@@ -90,4 +90,5 @@ alias pa="pyenv activate"
 # Pyenv
 
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# Commenting this one to avoid slowing down ZSH
+#eval "$(pyenv virtualenv-init -)"
