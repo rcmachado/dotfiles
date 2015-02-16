@@ -1,0 +1,22 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+.ropeproject
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+# Just to avoid ignoring SQL files!
+*.s[a-p][a-z]
+*.s[r-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+.idea
