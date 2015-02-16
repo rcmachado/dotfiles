@@ -7,12 +7,12 @@ function scp() {
     if [[ "$@" =~ : ]]; then
         /usr/bin/scp $@;
     else
-        echo "You forgot the colon";
+        2>&1 echo "ERROR: scp: missing colon";
     fi
 }
 
 # Build a gitignore file for project
 # See https://www.gitignore.io/
-function gi() {
-    curl -L -s "https://www.gitignore.io/api/$@";
+function gitignore() {
+    curl --location --show-error --silent "https://www.gitignore.io/api/$@";
 }
