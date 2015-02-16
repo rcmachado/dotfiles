@@ -23,7 +23,7 @@
 	smudge = git-media-smudge %f
 
 [alias]
-	serve = daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
+	serve = daemon --reuseaddr --verbose --base-path=. --export-all ./.git
 
 	glog = log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
