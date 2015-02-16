@@ -45,15 +45,15 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git pyenv)
+plugins=(git pyenv django)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 export EDITOR="vim"
-export PYENV_ROOT=$HOME/.pyenv
-export PATH="$HOME/.pyenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$HOME/.pyenv/bin:$HOME/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -82,13 +82,16 @@ export PATH="$HOME/.pyenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
-# Pyenv aliases
+# Aliases
+
 alias p=pyenv
-alias pv="pyenv virtualenv"
-alias pa="pyenv activate"
+alias workon="pyenv activate"
 
-# Pyenv
-
+# pyenv
+#
 eval "$(pyenv init -)"
-# Commenting this one to avoid slowing down ZSH
-#eval "$(pyenv virtualenv-init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# rbenv
+
+eval "$(rbenv init -)"
