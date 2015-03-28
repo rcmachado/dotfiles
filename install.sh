@@ -1,4 +1,3 @@
-#!/bin/bash
 #
 # Install all the dotfiles on system (using symlinks)
 #
