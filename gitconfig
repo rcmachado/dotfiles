@@ -1,3 +1,4 @@
+# vim: noexpandtab : set ft=gitconfig:
 [color]
 	status = auto
 	diff = auto
@@ -34,12 +35,12 @@
 	br = branch --all
 	st = status --short --branch
 	root = !cd $(git rev-parse --show-toplevel)
-	todo = grep --heading --break --ignore-case -e '\bTODO:'
-	fix = grep --heading --break --ignore-case -e '\bFIX:' -e '\bFIXME:'
+	todo = grep --heading --break --ignore-case --regexp='\bTODO:'
+	fix = grep --heading --break --ignore-case --regexp='\bFIX:' --regexp='\bFIXME:'
 	conflicts = !git ls-files -u | cut -f 2 | sort -u
 
 	ignore = update-index --assume-unchanged
-	uningore = update-index --no-assume-unchanged
+	unignore = update-index --no-assume-unchanged
 	ignored = !git ls-files -v | grep '^[a-z]'
 
 [include]
