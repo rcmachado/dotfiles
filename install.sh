@@ -1,32 +1,26 @@
+#!/bin/bash
 #
-# Install all the dotfiles on system (using symlinks)
+# Install all the dotfiles on system
+#
+# Uses rcm (https://github.com/thoughtbot/rcm)
 #
 
-INSTALL_DIR="$HOME"
+WHICH_OS=`uname`
 
-DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+function install_rcm {
+    case "$WHICH_OS" in
+        Darwin)
+            brew tap thoughtbot/formulae
+            brew install rcm
+            ;;
+        *)
+            echo "OS $WHICH_OS not supported; aborting;" && exit 1
+            ;;
+    esac
+}
 
-# Just in case
-mkdir -p "$INSTALL_DIR"
+function has_rcm {
+    [ `which rcm` ]
+}
 
-# Adapted from https://github.com/mikemcquaid/dotfiles/blob/master/install-dotfiles.sh
-for DOTFILE in *; do
-    HOMEFILE="$INSTALL_DIR/.$DOTFILE"
-    [ -d $DOTFILE ] && DOTFILE="$DOTFILE/"
-    DIRFILE="$DIR/$DOTFILE"
-
-    echo $DOTFILE | egrep -q '(install|\.txt|\.md)' && continue
-
-    #echo $DOTFILE | grep -q '\.sh' \
-    #    && HOMEFILE="$INSTALL_DIR/.$(echo $DOTFILE | sed -e 's/\.sh//')"
-
-    if [ -L "$HOMEFILE" ] && ! [ -d $DOTFILE ]
-    then
-        ln -sfv "$DIRFILE" "$HOMEFILE"
-    else
-        rm -rfv "$HOMEFILE"
-        ln -sv "$DIRFILE" "$HOMEFILE"
-    fi
-done
-
-"$DIR/install-gitignore.sh" "$INSTALL_DIR/"
+has_rcm && install_rcm
