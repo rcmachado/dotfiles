@@ -20,7 +20,16 @@ function install_rcm {
 }
 
 function has_rcm {
-    [ `which rcm` ]
+    [ ! `which rcm` ]
 }
 
-has_rcm && install_rcm
+function install_antigen() {
+    git clone https://github.com/zsh-users/antigen.git "$HOME/.antigen"
+}
+
+function has_antigen() {
+    [ -d "$HOME/.antigen" ]
+}
+
+has_rcm || install_rcm
+has_antigen || install_antigen
