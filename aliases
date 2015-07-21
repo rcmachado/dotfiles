@@ -1,2 +1,5 @@
 # vim: set ft=sh:
+alias phpcheck="find . -name \*.php | xargs -n 1 php -l > /dev/null"
+alias please='sudo $(history -p !!)'
+alias postgres-start="postgres -D /usr/local/var/postgres"
 alias workon="pyenv activate"

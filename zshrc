@@ -3,6 +3,7 @@ source "$HOME/.antigen/antigen.zsh"
 export EDITOR="vim"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$HOME/.pyenv/bin:$HOME/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export GOPATH="$HOME/Developer/go-workspace"
 
 DOTFILES="$HOME/.dotfiles"
 
