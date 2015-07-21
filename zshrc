@@ -4,6 +4,8 @@ export EDITOR="vim"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$HOME/.pyenv/bin:$HOME/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 
+DOTFILES="$HOME/.dotfiles"
+
 antigen use oh-my-zsh
 
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -24,4 +26,6 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 eval "$(rbenv init -)"
 
-source "$HOME/.dotfiles/aliases"
+source "$DOTIFLES/aliases"
+source "$DOTIFLES/colors"
+source "$DOTIFLES/functions"
