@@ -6,7 +6,7 @@
 
 [core]
 	editor = vim
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.dotfiles/gitignore
 
 [mergetool]
 	keepBackup = true
