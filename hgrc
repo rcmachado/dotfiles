@@ -1,0 +1,6 @@
+# vim: noexpandtab
+[ui]
+	username = Rodrigo Machado <rcmachado@gmail.com>
+
+[extensions]
+	record = 
