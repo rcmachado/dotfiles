@@ -5,22 +5,33 @@
 # Uses rcm (https://github.com/thoughtbot/rcm)
 #
 
-WHICH_OS=`uname`
+if [ `uname` == "Darwin" ]
+then
+    OS="osx"
+else
+    OS="unknown"
+fi
+
+. rcrc
 
 function install_rcm {
-    case "$WHICH_OS" in
-        Darwin)
+    case "$OS" in
+        osx)
             brew tap thoughtbot/formulae
             brew install rcm
             ;;
         *)
-            echo "OS $WHICH_OS not supported; aborting;" && exit 1
+            echo "OS $OS not supported; aborting;" && exit 1
             ;;
     esac
 }
 
 function has_rcm {
-    [ ! `which rcm` ]
+    [ `which rcup` ]
+}
+
+function run_rcup {
+    cd "$HOME" && rcup -t $OS -x ${EXCLUDES// / -x }
 }
 
 function install_antigen() {
@@ -33,3 +44,4 @@ function has_antigen() {
 
 has_rcm || install_rcm
 has_antigen || install_antigen
+run_rcup

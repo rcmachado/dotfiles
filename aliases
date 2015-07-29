@@ -4,3 +4,6 @@ alias please='sudo $(history -p !!)'
 alias postgres-start="postgres -D /usr/local/var/postgres"
 alias workon="pyenv activate"
 alias gt='git tag --sort="version:refname"'
+if [[ "$OSTYPE" == darwin* ]]; then
+    alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
+fi

@@ -7,6 +7,10 @@
 [core]
 	editor = vim
 	excludesfile = ~/.dotfiles/gitignore
+	# Treat spaces before tabs and all kinds of trailing whitespace as an error
+	# [default] trailing-space: looks for spaces at the end of a line
+	# [default] space-before-tab: looks for spaces before tabs at the beginning of a line
+	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 
 [mergetool]
 	keepBackup = true
@@ -15,6 +19,8 @@
 	ff = only
 	tool = vimdiff
 	defaultToUpstream = true
+	# Include summaries of merged commits in newly created merge commit messages
+	log = true
 
 [push]
 	default = simple
@@ -22,6 +28,10 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+
+[apply]
+	# Detect whitespace errors when applying a patch
+	whitespace = fix
 
 [alias]
 	serve = daemon --reuseaddr --verbose --base-path=. --export-all ./.git
@@ -42,6 +52,24 @@
 	ignore = update-index --assume-unchanged
 	unignore = update-index --no-assume-unchanged
 	ignored = !git ls-files -v | grep '^[a-z]'
+
+# URL shorthands
+
+[url "git@github.com:"]
+	insteadOf = "gh:"
+	pushInsteadOf = "github:"
+	pushInsteadOf = "git://github.com/"
+
+[url "git://github.com/"]
+	insteadOf = "github:"
+
+[url "git@gist.github.com:"]
+	insteadOf = "gst:"
+	pushInsteadOf = "gist:"
+	pushInsteadOf = "git://gist.github.com/"
+
+[url "git://gist.github.com/"]
+	insteadOf = "gist:"
 
 [include]
 	; Private config settings for user
