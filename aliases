@@ -7,3 +7,5 @@ alias gt='git tag --sort="version:refname"'
 if [[ "$OSTYPE" == darwin* ]]; then
     alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 fi
+alias p=pyenv
+alias python-publish="python setup.py --verbose sdist upload --show-response --repository"
