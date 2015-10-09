@@ -2,10 +2,14 @@
 alias phpcheck="find . -name \*.php | xargs -n 1 php -l > /dev/null"
 alias please='sudo $(history -p !!)'
 alias postgres-start="postgres -D /usr/local/var/postgres"
-alias workon="pyenv activate"
 alias gt='git tag --sort="version:refname"'
+
 if [[ "$OSTYPE" == darwin* ]]; then
     alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 fi
+
+alias workon="pyenv activate"
 alias p=pyenv
 alias python-publish="python setup.py --verbose sdist upload --show-response --repository"
+
+alias update-vim-plugins "vim +PluginUpdate +qall"
