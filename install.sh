@@ -42,6 +42,11 @@ function has_antigen() {
     [ -d "$HOME/.antigen" ]
 }
 
+function create_symlink() {
+    ln -snf "$PWD" "$HOME/.dotfiles"
+}
+
 has_rcm || install_rcm
 has_antigen || install_antigen
+create_symlink
 run_rcup
