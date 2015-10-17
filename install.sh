@@ -5,14 +5,14 @@
 # Uses rcm (https://github.com/thoughtbot/rcm)
 #
 
-if [ `uname` == "Darwin" ]
+if [ "$(uname)" == "Darwin" ]
 then
     OS="osx"
 else
     OS="unknown"
 fi
 
-. rcrc
+source rcrc
 
 function install_rcm {
     case "$OS" in
@@ -27,11 +27,11 @@ function install_rcm {
 }
 
 function has_rcm {
-    [ `which rcup` ]
+    [ "$(which rcup)" ]
 }
 
 function run_rcup {
-    cd "$HOME" && rcup -t $OS -x ${EXCLUDES// / -x }
+    cd "$HOME" && rcup -t "$OS" -x "${EXCLUDES// / -x }"
 }
 
 function install_antigen() {
