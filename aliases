@@ -2,7 +2,9 @@
 alias phpcheck="find . -name \*.php | xargs -n 1 php -l > /dev/null"
 alias please='sudo $(history -p !!)'
 alias postgres-start="postgres -D /usr/local/var/postgres"
+
 alias gt='git tag --sort="version:refname"'
+alias gdc="git diff --cached"
 
 if [[ "$OSTYPE" == darwin* ]]; then
     alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
