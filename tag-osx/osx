@@ -30,6 +30,12 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Stop iTunes from responding to the keyboard media keys
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
+# Tap to click
+defaults write com.apple.mouse.tapBehavior -int 0
+
+# Disable fast user switching menu
+sudo defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabled -bool false
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
@@ -76,6 +82,9 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
 
+# Hide dock
+defaults write com.apple.dock autohide -bool true
+
 ###############################################################################
 # Google Chrome & Google Chrome Canary                                        #
 ###############################################################################
@@ -84,3 +93,4 @@ defaults write com.apple.dashboard mcx-disabled -bool true
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
 
+killall Dock
