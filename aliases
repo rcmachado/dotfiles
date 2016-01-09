@@ -12,6 +12,6 @@ fi
 
 alias workon="pyenv activate"
 alias p=pyenv
-alias python-publish="python setup.py --verbose sdist upload --show-response --repository"
+alias pip-pub="python setup.py --verbose sdist upload --repository"
 
 alias update-vim-plugins "vim +PluginUpdate +qall"
