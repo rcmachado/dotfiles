@@ -1,3 +1,5 @@
-
 # Always enable colored `grep` output.
 export GREP_OPTIONS='--color=auto';
+
+# Install casks directly into /Applications
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
