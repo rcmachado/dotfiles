@@ -31,3 +31,5 @@ eval "$(rbenv init -)"
 source "$HOME/.aliases"
 source "$HOME/.colors"
 source "$HOME/.functions"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
