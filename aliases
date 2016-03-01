@@ -15,3 +15,4 @@ alias p=pyenv
 alias pip-pub="python setup.py --verbose sdist upload --repository"
 
 alias update-vim-plugins="vim +PluginUpdate +qall"
+alias ccat='pygmentize -g -O bg=dark,style=colorful,linenos=1'
