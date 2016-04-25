@@ -5,6 +5,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$HOME/.pyenv/bin:$HOME/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 export GOPATH="$HOME/Developer/go-workspace"
 
+# Avoid Homebrew sending data to Google Analytics
+export HOMEBREW_NO_ANALYTICS=1
+
 DOTFILES="$HOME/.dotfiles"
 
 antigen use oh-my-zsh
