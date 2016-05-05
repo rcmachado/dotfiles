@@ -5,6 +5,7 @@ alias postgres-start="postgres -D /usr/local/var/postgres"
 
 alias gt='git tag --sort="version:refname"'
 alias gdc="git diff --cached"
+alias gap='git add --patch'
 
 if [[ "$OSTYPE" == darwin* ]]; then
     alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
