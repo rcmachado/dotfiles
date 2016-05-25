@@ -1,6 +1,8 @@
 #!/bin/bash
 
 export PYENV_VIRTUALENV_DISABLE_PROMPT=true
+export PYENV_ROOT="${HOME}/.pyenv"
+export PATH="${HOME}/.pyenv/bin:${PATH}"
 
 function omg_prompt_callback {
     if [ -n "${VIRTUAL_ENV}" ]; then
@@ -8,3 +10,11 @@ function omg_prompt_callback {
         echo "%F{white}(${ENV_NAME})%f "
     fi
 }
+
+antigen bundle pip
+antigen bundle pyenv
+antigen bundle django
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+eval "$(rbenv init -)"
