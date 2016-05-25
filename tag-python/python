@@ -1,0 +1,10 @@
+#!/bin/bash
+
+export PYENV_VIRTUALENV_DISABLE_PROMPT=true
+
+function omg_prompt_callback {
+    if [ -n "${VIRTUAL_ENV}" ]; then
+        ENV_NAME=$(basename "${VIRTUAL_ENV}")
+        echo "%F{white}(${ENV_NAME})%f "
+    fi
+}
