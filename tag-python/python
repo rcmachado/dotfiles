@@ -16,4 +16,3 @@ antigen bundle pyenv
 antigen bundle django
 
 eval "$(pyenv init -)"
-eval "$(rbenv init -)"

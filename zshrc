@@ -24,6 +24,8 @@ antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
 
 antigen apply
 
+eval "$(rbenv init -)"
+
 source "$HOME/.aliases"
 source "$HOME/.colors"
 source "$HOME/.functions"
