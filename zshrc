@@ -7,8 +7,6 @@ export GOPATH="$HOME/Developer/go-workspace"
 # Avoid Homebrew sending data to Google Analytics
 export HOMEBREW_NO_ANALYTICS=1
 
-test -e "${HOME}/.python" && source "${HOME}/.python"
-
 DOTFILES="$HOME/.dotfiles"
 
 antigen use oh-my-zsh
@@ -21,6 +19,8 @@ antigen bundle rbenv
 
 antigen bundle arialdomartini/oh-my-git
 antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
+
+test -e "${HOME}/.python" && source "${HOME}/.python"
 
 antigen apply
 
