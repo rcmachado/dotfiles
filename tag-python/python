@@ -11,8 +11,10 @@ function omg_prompt_callback {
     fi
 }
 
-antigen bundle pip
-antigen bundle pyenv
-antigen bundle django
+antigen bundles <<EOBUNDLES
+    pip
+    pyenv
+    django
+EOBUNDLES
 
 eval "$(pyenv init -)"

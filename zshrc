@@ -11,13 +11,14 @@ DOTFILES="$HOME/.dotfiles"
 
 antigen use oh-my-zsh
 
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-history-substring-search
+antigen bundles <<EOBUNDLES
+    zsh-users/zsh-syntax-highlighting
+    zsh-users/zsh-history-substring-search
+    arialdomartini/oh-my-git
+    git
+    rbenv
+EOBUNDLES
 
-antigen bundle git
-antigen bundle rbenv
-
-antigen bundle arialdomartini/oh-my-git
 antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
 
 test -e "${HOME}/.python" && source "${HOME}/.python"
