@@ -1,1 +1,1 @@
-EXCLUDES="LICENSE.txt githooks install.sh gitconfig-private-example"
+EXCLUDES="LICENSE.txt githooks installer gitconfig-private-example"
