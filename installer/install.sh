@@ -64,6 +64,7 @@ brew_install_packages() {
     $BREW_BIN cask install caffeine divvy java kindle sequel-pro slack spotify vagrant xquartz
     $BREW_BIN services start mysql
     $BREW_BIN services start mongodb
+    gem install i2cssh
 }
 
 install_antigen() {
