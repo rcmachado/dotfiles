@@ -154,7 +154,7 @@ install_ruby() {
 
 install_node_libs() {
     npm install --global npm
-    npm install --global grunt-cli bower bower-installer
+    npm install --global grunt-cli bower bower-installer uglifyjs
 }
 
 install_custom_font() {
