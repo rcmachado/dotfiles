@@ -56,7 +56,7 @@ brew_install_packages() {
     $BREW_BIN tap thoughtbot/formulae
     $BREW_BIN tap tsuru/tsuru
     $BREW_BIN update
-    $BREW_BIN install elixir git go jq mongodb mysql node rcm rbenv shellcheck the_silver_searcher tsuru zsh
+    $BREW_BIN install editorconfig elixir git go jq mongodb mysql node rcm rbenv shellcheck the_silver_searcher tsuru zsh
     $BREW_BIN install --HEAD vim
     $BREW_BIN install --HEAD macvim
     $BREW_BIN install --with-nghttp2 --with-openssl curl
