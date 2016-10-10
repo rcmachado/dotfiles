@@ -1,8 +1,8 @@
 source "$HOME/.antigen/antigen.zsh"
 
 export EDITOR="vim"
-export PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
-export GOPATH="$HOME/Developer/go-workspace"
+export GOPATH="$HOME/Developer/go"
+export PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$GOPATH/bin"
 
 # Avoid Homebrew sending data to Google Analytics
 export HOMEBREW_NO_ANALYTICS=1
