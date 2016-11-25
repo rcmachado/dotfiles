@@ -43,6 +43,7 @@
 	work = !git lg --author rcmachado --before today --after \"3 days ago\" --no-merges
 
 	br = branch --all
+	cp = cherry-pick
 	st = status --short --branch
 	root = !cd $(git rev-parse --show-toplevel)
 	todo = grep --heading --break --ignore-case --regexp='\bTODO:'
