@@ -31,4 +31,8 @@ source "$HOME/.aliases"
 source "$HOME/.colors"
 source "$HOME/.functions"
 
+# NVM
+export NVM_DIR="/Users/rcmachado/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
