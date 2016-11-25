@@ -54,16 +54,13 @@ brew_setup() {
 
 brew_install_packages() {
     $BREW_BIN tap thoughtbot/formulae
-    $BREW_BIN tap tsuru/tsuru
     $BREW_BIN update
-    $BREW_BIN install editorconfig elixir git git-fresh go jq mongodb mysql node rcm rbenv shellcheck the_silver_searcher tsuru zsh
+    $BREW_BIN install editorconfig elixir git git-fresh go jq mysql node rcm rbenv shellcheck the_silver_searcher zsh
     $BREW_BIN install --HEAD vim
-    $BREW_BIN install --HEAD macvim
     $BREW_BIN install --with-nghttp2 --with-openssl curl
     $BREW_BIN link curl --force
-    $BREW_BIN cask install caffeine divvy java kindle sequel-pro slack spotify vagrant xquartz
+    $BREW_BIN cask install caffeine divvy dropbox hipchat iterm2 java kindle sequel-pro slack spotify vagrant
     $BREW_BIN services start mysql
-    $BREW_BIN services start mongodb
     gem install i2cssh
 }
 
