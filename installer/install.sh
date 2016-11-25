@@ -115,7 +115,7 @@ generate_ssh_key() {
 }
 
 install_firefox_developer_edition() {
-    local VERSION=49.0a2
+    local VERSION=52.0a2
     local FIREFOX_PATH=/Applications/FirefoxDeveloperEdition.app/Contents/MacOS/firefox
 
     if [ ! -x "$FIREFOX_PATH" ]; then
