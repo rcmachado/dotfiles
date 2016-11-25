@@ -32,6 +32,9 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/nul
 
 # Tap to click
 defaults write com.apple.mouse.tapBehavior -int 0
+defaults write com.apple.AppleMultitouchTrackpad Clicking -int 1
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Disable fast user switching menu
 sudo defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabled -bool false
