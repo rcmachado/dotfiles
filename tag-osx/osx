@@ -160,6 +160,13 @@ defaults write com.apple.commerce AutoUpdate -bool true
 # defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 
 ###############################################################################
+# Tweetbot.app                                                                #
+###############################################################################
+
+# Bypass the annoyingly slow t.co URL shortener
+defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
+
+###############################################################################
 # Google Chrome & Google Chrome Canary                                        #
 ###############################################################################
 
