@@ -82,9 +82,6 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
 
-# Disable Dashboard
-defaults write com.apple.dashboard mcx-disabled -bool true
-
 # Hide dock
 defaults write com.apple.dock autohide -bool true
 
