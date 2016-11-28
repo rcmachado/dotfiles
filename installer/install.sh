@@ -5,8 +5,6 @@
 
 set -e
 
-XCODEBUILD_BIN=$(/usr/bin/xcrun --find xcodebuild)
-XCODE_SELECT_BIN=$(/usr/bin/xcrun --find xcode-select)
 RUBY_BIN=/usr/bin/ruby
 BREW_BIN=/usr/local/bin/brew
 PYENV_BIN="$HOME/.pyenv/bin/pyenv"
@@ -19,19 +17,6 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 setup_dirs() {
     mkdir -p "$HOME/Developer"
-}
-
-xcode_setup() {
-    echo Setup Xcode
-
-    sudo "$XCODE_SELECT_BIN" --reset
-    sudo "$XCODEBUILD_BIN" -license
-    if [ $? -ne 0 ]; then
-        echo You need to accept Xcode License
-        exit 1
-    fi
-
-    "$XCODE_SELECT_BIN" --install || true
 }
 
 setup_zsh() {
@@ -166,7 +151,6 @@ install_custom_font() {
 }
 
 setup_dirs
-xcode_setup
 brew_setup
 brew_install_packages
 setup_zsh
