@@ -46,7 +46,7 @@ brew_install_packages() {
     $BREW_BIN install --HEAD vim
     $BREW_BIN install --with-nghttp2 curl
     $BREW_BIN link curl --force
-    $BREW_BIN cask install 1password caffeine google-chrome divvy dropbox hipchat iterm2 java kindle sequel-pro slack spotify vagrant
+    $BREW_BIN cask install 1password caffeine google-chrome divvy dropbox hipchat iterm2 java kindle paw sequel-pro slack spotify vagrant
     $BREW_BIN services start mysql
     gem install i2cssh
 }
