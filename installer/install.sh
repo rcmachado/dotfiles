@@ -40,7 +40,7 @@ brew_install_packages() {
     $BREW_BIN update
     $BREW_BIN install editorconfig elixir git git-fresh go jq mysql node rcm rbenv shellcheck the_silver_searcher zsh
     $BREW_BIN install --HEAD vim
-    $BREW_BIN install --with-nghttp2 --with-openssl curl
+    $BREW_BIN install --with-nghttp2 curl
     $BREW_BIN link curl --force
     $BREW_BIN cask install caffeine divvy dropbox hipchat iterm2 java kindle sequel-pro slack spotify vagrant
     $BREW_BIN services start mysql
