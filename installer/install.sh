@@ -25,6 +25,10 @@ setup_zsh() {
     chsh -s "$shell_bin" "$USER"
 }
 
+add_github_to_known_hosts() {
+    ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+}
+
 brew_setup() {
     which "$BREW_BIN" > /dev/null 2> /dev/null
     if [ $? -ne 0 ]; then
@@ -149,6 +153,7 @@ install_custom_font() {
 }
 
 setup_dirs
+add_github_to_known_hosts
 brew_setup
 brew_install_packages
 setup_zsh
