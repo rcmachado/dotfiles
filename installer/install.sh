@@ -3,8 +3,6 @@
 # Setup all the things
 #
 
-set -e
-
 RUBY_BIN=/usr/bin/ruby
 BREW_BIN=/usr/local/bin/brew
 PYENV_BIN="$HOME/.pyenv/bin/pyenv"
