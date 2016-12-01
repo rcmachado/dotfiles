@@ -56,6 +56,9 @@
 	unignore = update-index --no-assume-unchanged
 	ignored = !git ls-files -v | grep '^[a-z]'
 
+	# hub commands
+	pr = pull-request
+
 # URL shorthands
 
 [url "git@github.com:"]
