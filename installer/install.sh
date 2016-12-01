@@ -7,7 +7,7 @@ RUBY_BIN=/usr/bin/ruby
 BREW_BIN=/usr/local/bin/brew
 PYENV_BIN="$HOME/.pyenv/bin/pyenv"
 PYTHON_BIN="$HOME/.pyenv/shims/python"
-RBENV_BIN="/usr/local/bin/rbenv"
+RBENV_BIN="$HOME/.rbenv/bin/rbenv"
 GEM_BIN="/$HOME/.rbenv/shims/gem"
 
 export PYENV_ROOT="$HOME/.pyenv"
@@ -42,7 +42,7 @@ brew_setup() {
 brew_install_packages() {
     $BREW_BIN tap thoughtbot/formulae
     $BREW_BIN update
-    $BREW_BIN install editorconfig elixir git git-fresh go hub jq mysql node rcm rbenv shellcheck the_silver_searcher zsh
+    $BREW_BIN install editorconfig elixir git git-fresh go hub jq mysql node rcm shellcheck the_silver_searcher zsh
     $BREW_BIN install --HEAD vim
     $BREW_BIN install --with-nghttp2 curl
     $BREW_BIN link curl --force
@@ -62,6 +62,13 @@ pyenv_setup() {
     if [ ! -x "$PYENV_BIN" ]; then
         echo Installing pyenv
         curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+    fi
+}
+
+rbenv_setup() {
+    if [ ! -x "$RBENV_BIN" ]; then
+        echo Installing rbenv
+        curl -L https://raw.githubusercontent.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash
     fi
 }
 
@@ -132,8 +139,8 @@ install_python() {
 }
 
 install_ruby() {
-    "$RBENV_BIN" install --skip-existing 2.3.1
-    RBENV_VERSION=2.3.1 "$GEM_BIN" install bundler
+    "$RBENV_BIN" install --skip-existing 2.3.3
+    RBENV_VERSION=2.3.3 "$GEM_BIN" install bundler
 }
 
 install_node_libs() {
@@ -159,6 +166,7 @@ brew_install_packages
 setup_zsh
 install_antigen
 pyenv_setup
+rbenv_setup
 install_firefox_developer_edition
 generate_ssh_key
 setup_dotfiles
