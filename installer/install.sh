@@ -42,7 +42,7 @@ brew_setup() {
 brew_install_packages() {
     $BREW_BIN tap thoughtbot/formulae
     $BREW_BIN update
-    $BREW_BIN install editorconfig elixir git git-fresh go hub jq mysql node rcm shellcheck the_silver_searcher zsh
+    $BREW_BIN install autoenv editorconfig elixir git git-fresh go hub jq mysql node rcm shellcheck the_silver_searcher zsh
     $BREW_BIN install --HEAD vim
     $BREW_BIN install --with-nghttp2 curl
     $BREW_BIN link curl --force
