@@ -17,6 +17,7 @@ antigen bundles <<EOBUNDLES
     arialdomartini/oh-my-git
     git
     rbenv
+    lukechilds/zsh-nvm
 EOBUNDLES
 
 antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
