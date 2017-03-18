@@ -15,6 +15,7 @@ alias workon="pyenv activate"
 alias p=pyenv
 alias pip-pub="python setup.py --verbose sdist upload --repository"
 alias dj="python manage.py"
+alias cdgo="cd $GOPATH/src"
 
 alias update-vim-plugins="vim +PluginUpdate +qall"
 alias ccat='pygmentize -g -O bg=dark,style=colorful,linenos=1'
