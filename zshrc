@@ -14,10 +14,40 @@ antigen use oh-my-zsh
 antigen bundles <<EOBUNDLES
     zsh-users/zsh-syntax-highlighting
     zsh-users/zsh-history-substring-search
-    arialdomartini/oh-my-git
+
+    brew
+    common-aliases
+    extract
+    osx
+    rsync
+    sudo
+    terraform
+    vagrant
+
+    autoenv
     git
-    rbenv
+    github
+    gitignore
+    arialdomartini/oh-my-git
+
+    celery
+    postgres
+    redis-cli
+
+    python
+    pyenv
+    pip
+    virtualenv
+
+    node
+    npm
     lukechilds/zsh-nvm
+    yarn
+
+    golang
+
+    rbenv
+    gem
 EOBUNDLES
 
 antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
