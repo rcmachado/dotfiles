@@ -7,6 +7,10 @@ export PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/
 # Avoid Homebrew sending data to Google Analytics
 export HOMEBREW_NO_ANALYTICS=1
 
+# NVM
+export NVM_DIR="/Users/rcmachado/.nvm"
+export NVM_LAZY_LOAD=true
+
 DOTFILES="$HOME/.dotfiles"
 
 antigen use oh-my-zsh
@@ -61,10 +65,6 @@ eval "$(rbenv init -)"
 source "$HOME/.aliases"
 source "$HOME/.colors"
 source "$HOME/.functions"
-
-# NVM
-export NVM_DIR="/Users/rcmachado/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 source "$(brew --prefix autoenv)/activate.sh"
 
