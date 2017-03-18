@@ -48,6 +48,7 @@
 	root = !cd $(git rev-parse --show-toplevel)
 	todo = grep --heading --break --ignore-case --regexp='\bTODO:'
 	fix = grep --heading --break --ignore-case --regexp='\bFIX:' --regexp='\bFIXME:'
+	fix-author = commit --amend --reset-author --no-edit
 	conflicts = !git ls-files -u | cut -f 2 | sort -u
 
 	bl = blame -w -M -C -c
