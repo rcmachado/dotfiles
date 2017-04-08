@@ -1,11 +1,12 @@
 source "$HOME/.antigen/antigen.zsh"
 
 export EDITOR="vim"
-export GOPATH="$HOME/Developer/go"
-export PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$GOPATH/bin"
 
 # Avoid Homebrew sending data to Google Analytics
 export HOMEBREW_NO_ANALYTICS=1
+
+# Always enable colored `grep` output.
+export GREP_OPTIONS='--color=auto';
 
 # NVM
 export NVM_DIR="/Users/rcmachado/.nvm"
