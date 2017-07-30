@@ -1,7 +1,5 @@
 source "$HOME/.antigen/antigen.zsh"
 
-export EDITOR="vim"
-
 # Avoid Homebrew sending data to Google Analytics
 export HOMEBREW_NO_ANALYTICS=1
 

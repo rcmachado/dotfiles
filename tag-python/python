@@ -2,7 +2,6 @@
 
 export PYENV_VIRTUALENV_DISABLE_PROMPT=true
 export PYENV_ROOT="${HOME}/.pyenv"
-export PATH="${HOME}/.pyenv/bin:${PATH}"
 
 function omg_prompt_callback() {
     if [ -n "${VIRTUAL_ENV}" ]; then
