@@ -23,6 +23,7 @@ antigen bundles <<EOBUNDLES
     brew
     common-aliases
     extract
+    heroku
     osx
     rsync
     sudo
