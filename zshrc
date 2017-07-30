@@ -34,7 +34,7 @@ antigen bundles <<EOBUNDLES
     git
     github
     gitignore
-    arialdomartini/oh-my-git
+    rcmachado/oh-my-git
 
     celery
     postgres
