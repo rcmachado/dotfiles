@@ -14,53 +14,10 @@ export NVM_LAZY_LOAD=true
 
 DOTFILES="$HOME/.dotfiles"
 
-antigen use oh-my-zsh
 
-antigen bundles <<EOBUNDLES
-    zsh-users/zsh-syntax-highlighting
-    zsh-users/zsh-history-substring-search
-
-    brew
-    common-aliases
-    extract
-    heroku
-    osx
-    rsync
-    sudo
-    terraform
-    vagrant
-
-    autoenv
-    git
-    github
-    gitignore
-    rcmachado/oh-my-git
-
-    celery
-    postgres
-    redis-cli
-
-    python
-    pyenv
-    pip
-    virtualenv
-
-    node
-    npm
-    lukechilds/zsh-nvm
-    yarn
-
-    golang
-
-    rbenv
-    gem
-EOBUNDLES
-
-antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
+antigen init .antigenrc
 
 test -e "${HOME}/.python" && source "${HOME}/.python"
-
-antigen apply
 
 eval "$(rbenv init -)"
 
