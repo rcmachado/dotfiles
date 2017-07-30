@@ -14,7 +14,6 @@ export NVM_LAZY_LOAD=true
 
 DOTFILES="$HOME/.dotfiles"
 
-
 antigen init .antigenrc
 
 test -e "${HOME}/.python" && source "${HOME}/.python"

@@ -41,6 +41,6 @@ antigen bundles <<EOBUNDLES
     gem
 EOBUNDLES
 
-antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
+antigen theme rcmachado/oh-my-git-themes oppa-lana-style
 
 antigen apply
