@@ -10,8 +10,10 @@ if [[ "$OSTYPE" == darwin* ]]; then
     alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 fi
 
-alias workon="pyenv activate"
 alias p=pyenv
+alias pa="pyenv activate"
+alias pd="pyenv deactivate"
+
 alias pip-pub="python setup.py --verbose sdist upload --repository"
 alias dj="python manage.py"
 alias cdgo="cd $GOPATH/src"
