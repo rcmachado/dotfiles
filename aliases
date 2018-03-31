@@ -21,3 +21,5 @@ alias cdgo="cd $GOPATH/src"
 alias update-vim-plugins="vim +PluginUpdate +qall"
 alias ccat='pygmentize -g -O bg=dark,style=colorful,linenos=1'
 alias mssh='i2cssh'
+
+alias na='nvm use $(jq -r .engines.node package.json)'
