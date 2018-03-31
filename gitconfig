@@ -36,6 +36,7 @@
 [alias]
 	serve = daemon --reuseaddr --verbose --base-path=. --export-all ./.git
 
+	dog = log --all --decorate --oneline --graph
 	glog = log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	lgnoauthor = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit
@@ -82,3 +83,7 @@
 	; Private config settings for user
 	; Don't ever commit this file
 	path = ~/.private-gitconfig
+[rebase]
+	autosquash = true
+[web]
+	browser = open
