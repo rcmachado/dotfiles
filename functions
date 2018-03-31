@@ -45,3 +45,8 @@ function server() {
 function tre() {
     tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+# Install IPython and other useful extensions
+function install_ipython() {
+    PIP_REQUIRE_VIRTUALENV=1 pip install ipython line_profiler memory_profiler
+}
