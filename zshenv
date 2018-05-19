@@ -10,4 +10,4 @@ export PYENV_ROOT="${HOME}/.pyenv"
 export NVM_DIR="${HOME}/.nvm"
 export NVM_LAZY_LOAD=true
 
-export PATH="${PYENV_ROOT}/.bin:${HOME}/.rbenv/bin:${GOPATH}/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export PATH="${PYENV_ROOT}/bin:${HOME}/.rbenv/bin:${GOPATH}/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
