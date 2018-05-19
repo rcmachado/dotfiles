@@ -42,12 +42,10 @@ brew_setup() {
 brew_install_packages() {
     $BREW_BIN tap thoughtbot/formulae
     $BREW_BIN update
-    $BREW_BIN install autoenv editorconfig elixir git git-fresh go hub jq mysql node rcm shellcheck the_silver_searcher zsh
-    $BREW_BIN install --HEAD vim
+    $BREW_BIN install autoenv editorconfig elixir git git-fresh go hub jq node rcm shellcheck the_silver_searcher vim zsh
     $BREW_BIN install --with-nghttp2 curl
     $BREW_BIN link curl --force
-    $BREW_BIN cask install 1password caffeine google-chrome divvy dropbox hipchat iterm2 imageoptim java kindle mas paw sequel-pro slack spotify vagrant
-    $BREW_BIN services start mysql
+    $BREW_BIN cask install 1password caffeine google-chrome divvy dropbox iterm2 imageoptim java kindle mas paw sequel-pro slack spotify
     gem install i2cssh
 }
 
