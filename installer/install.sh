@@ -130,10 +130,6 @@ install_python() {
 
     "$PYENV_BIN" install --skip-existing 3.5.2
     PYENV_VERSION=3.5.2 "$PYTHON_BIN" -m pip install -U pip setuptools
-    "$PYENV_BIN" install --skip-existing 3.4.5
-    PYENV_VERSION=3.4.5 "$PYTHON_BIN" -m pip install -U pip setuptools
-    "$PYENV_BIN" install --skip-existing 3.3.6
-    PYENV_VERSION=3.3.6 "$PYTHON_BIN" -m pip install -U pip setuptools
     "$PYENV_BIN" install --skip-existing 2.7.12
     PYENV_VERSION=2.7.12 "$PYTHON_BIN" -m pip install -U pip setuptools
 }
