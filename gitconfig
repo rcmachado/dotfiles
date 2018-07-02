@@ -87,3 +87,5 @@
 	autosquash = true
 [web]
 	browser = open
+[hub]
+	protocol = ssh
