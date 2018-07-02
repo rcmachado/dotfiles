@@ -20,3 +20,6 @@ source "$(brew --prefix autoenv)/activate.sh"
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH="$HOME/Library/Caches/heroku/autocomplete/zsh_setup" && test -f "$HEROKU_AC_ZSH_SETUP_PATH" && source "$HEROKU_AC_ZSH_SETUP_PATH";
