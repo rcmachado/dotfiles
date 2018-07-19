@@ -88,6 +88,7 @@
 	path = ~/.private-gitconfig
 [rebase]
 	autosquash = true
+	autoStash = true
 [web]
 	browser = open
 [hub]
