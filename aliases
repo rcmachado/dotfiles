@@ -1,7 +1,4 @@
 # vim: set ft=sh:
-alias please='sudo $(history -p !!)'
-alias postgres-start="postgres -D /usr/local/var/postgres"
-
 alias gt='git tag --sort="version:refname"'
 alias gdc="git diff --cached"
 alias gap='git add --patch'
@@ -10,16 +7,12 @@ if [[ "$OSTYPE" == darwin* ]]; then
     alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 fi
 
-alias p=pyenv
 alias pa="pyenv activate"
 alias pd="pyenv deactivate"
 
-alias pip-pub="python setup.py --verbose sdist upload --repository"
 alias dj="python manage.py"
 alias cdgo="cd $GOPATH/src"
 
-alias update-vim-plugins="vim +PluginUpdate +qall"
-alias ccat='pygmentize -g -O bg=dark,style=colorful,linenos=1'
 alias mssh='i2cssh'
 
 alias na='nvm use $(jq -r .engines.node package.json)'
