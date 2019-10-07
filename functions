@@ -3,8 +3,12 @@
 # Shell Aliases
 #
 
+tinit() {
+    terraform init -upgrade=true
+}
+
 # Check if we forget the colon on scp
-function scp() {
+scp() {
     if [[ "$@" =~ : ]]; then
         /usr/bin/scp $@;
     else
@@ -14,13 +18,13 @@ function scp() {
 
 # Build a gitignore file for project
 # See https://www.gitignore.io/
-function gitignore() {
+gitignore() {
     curl --location --show-error --silent "https://www.gitignore.io/api/$@";
 }
 
 # Create a data URL from a file
 # Adapted from https://github.com/mathiasbynens/dotfiles/blob/master/.functions
-function dataurl() {
+dataurl() {
     local mimeType=$(file -b --mime-type "$1");
     if [[ $mimeType == text/* ]]; then
         mimeType="${mimeType};charset=utf-8";
@@ -30,7 +34,7 @@ function dataurl() {
 
 # Start an HTTP server from a directory, optionally specifying the port
 # Adapted from https://github.com/mathiasbynens/dotfiles/blob/master/.functions
-function server() {
+server() {
     local port="${1:-8000}";
     # Set the default Content-Type to `text/plain` instead of `application/octet-stream`
     # And serve everything as UTF-8 (although not technically correct, this doesn’t break anything for binary files)
@@ -42,11 +46,6 @@ function server() {
 # `less` with options to preserve color and line numbers, unless the output is
 # small enough for one screen.
 # Adapted from https://github.com/mathiasbynens/dotfiles/blob/master/.functions
-function tre() {
+tre() {
     tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
-}
-
-# Install IPython and other useful extensions
-function install_ipython() {
-    PIP_REQUIRE_VIRTUALENV=1 pip install ipython line_profiler memory_profiler
 }
