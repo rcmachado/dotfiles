@@ -1,25 +1,34 @@
+SPACESHIP_PROMPT_ORDER=(
+  dir           # Current directory section
+  git           # Git section (git_branch + git_status)
+  pyenv         # Pyenv section
+  line_sep      # Line break
+  exit_code     # Exit code section
+  char          # Prompt character
+)
+
 source "$HOME/.antigen/antigen.zsh"
 
-# Always enable colored `grep` output.
-export GREP_OPTIONS='--color=auto';
+[ -f ~/.private-env ] && source ~/.private-env
 
 DOTFILES="$HOME/.dotfiles"
 
+export NVM_LAZY_LOAD=true
+
 antigen init .antigenrc
 
-test -e "${HOME}/.python" && source "${HOME}/.python"
+export PYENV_ROOT="/usr/local/Cellar/pyenv/1.2.13_1"
 
-eval "$(rbenv init -)"
+eval "$(${PYENV_ROOT}/bin/pyenv init - zsh --no-rehash)"
 
 source "$HOME/.aliases"
 source "$HOME/.colors"
 source "$HOME/.functions"
 
-source "$(brew --prefix autoenv)/activate.sh"
-
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# heroku autocomplete setup
-HEROKU_AC_ZSH_SETUP_PATH="$HOME/Library/Caches/heroku/autocomplete/zsh_setup" && test -f "$HEROKU_AC_ZSH_SETUP_PATH" && source "$HEROKU_AC_ZSH_SETUP_PATH";
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent

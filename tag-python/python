@@ -1,14 +1,6 @@
 #!/bin/bash
 
-export PYENV_VIRTUALENV_DISABLE_PROMPT=true
+# export PYENV_VIRTUALENV_DISABLE_PROMPT=true
 export PYENV_ROOT="${HOME}/.pyenv"
-
-function omg_prompt_callback() {
-    if [ -n "${VIRTUAL_ENV}" ]; then
-        local name
-        name=$(basename "${VIRTUAL_ENV}")
-        echo "\e[0;31m(${name})\e[0m "
-    fi
-}
 
 eval "$(pyenv init -)"
