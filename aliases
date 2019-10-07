@@ -11,8 +11,10 @@ alias pa="pyenv activate"
 alias pd="pyenv deactivate"
 
 alias dj="python manage.py"
-alias cdgo="cd $GOPATH/src"
-
-alias mssh='i2cssh'
 
 alias na='nvm use $(jq -r .engines.node package.json)'
+alias gb="git branch --sort=-committerdate"
+alias hpr="hub pull-request -p"
+
+alias t="terraform"
+alias pip="python -m pip"
