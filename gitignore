@@ -1,13 +1,15 @@
 
-# Created by https://www.gitignore.io/api/osx,vim
+# Created by https://www.gitignore.io/api/visualstudiocode,osx,vim
+# Edit at https://www.gitignore.io/?templates=visualstudiocode,osx,vim
 
 ### OSX ###
-*.DS_Store
+# General
+.DS_Store
 .AppleDouble
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
 
 # Thumbnails
 ._*
@@ -28,21 +30,35 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-
 ### Vim ###
-# swap
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
-# session
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Session
 Session.vim
-# temporary
+Sessionx.vim
+
+# Temporary
 .netrwhist
 *~
-# auto-generated tag files
+# Auto-generated tag files
 tags
+# Persistent undo
+[._]*.un~
 
-### Personal ###
-# Don't ignore SVG files
-!*.svg
-# Ignore files from rope vim plugin
-.ropeproject
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+
+# End of https://www.gitignore.io/api/visualstudiocode,osx,vim
